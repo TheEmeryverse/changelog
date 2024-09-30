@@ -1,0 +1,18 @@
+body {
+        background-color: rgba(102,1,255,255);
+}
+
+h1 {
+        color: white;
+        margin-left: 20px;
+}
+
+h2 {
+        color: white;
+        margin-left: 40px;
+}       
+
+p {
+        color: white;
+        margin-left: 60px;
+}       
