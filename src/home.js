@@ -47,8 +47,6 @@ export const Home = () => {
         <div className='bgGradient'></div>
         <h1>The Emeryverse! Changelog</h1>
         <div className='sortRow'>
-            <div>
-            </div>
             <div className='sortDropdown'>
                 <div>Search: </div>
                 <input type="text" placeholder='Search' className='searchBar' onChange={(e) => {search(e.target.value, reorder, orderName, updateOrderName)}}/>

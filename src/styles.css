@@ -26,14 +26,13 @@ h1 {
         display: flex;
         margin-top: 1.5rem;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         position: sticky;
         top: 0px;
-        padding-right: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem;
         backdrop-filter: blur(10px);
         z-index: 2;
+
 }
 
 .searchBar {
@@ -51,6 +50,9 @@ h1 {
         display: flex;
         text-transform: uppercase;
         align-items: center;
+        justify-content: end;
+        width: 100%;
+        max-width: 832px;
 }
 
 .sortDropdown > select {
@@ -63,6 +65,9 @@ h1 {
         padding: 2rem;
         position: relative;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }
 
 .versionCard {
@@ -71,6 +76,8 @@ h1 {
         padding: 1rem;
         border-radius: 20px;
         box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 800px;
 }
 
 .versionHeader {
