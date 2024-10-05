@@ -1,6 +1,5 @@
 #! /bin/bash
 
-cd /home/containerConfigs/changelog
 git pull
 docker stop changelog
 docker rm changelog
