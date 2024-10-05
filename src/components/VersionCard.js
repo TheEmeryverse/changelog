@@ -6,7 +6,7 @@ export const VersionCard = (props) => {
     return <div className='versionCard'>
         <div className='versionHeader'>
             <div className="versionTitle">
-                {version}
+                <span className='versionNumber'>{version}</span>
                 { info.title ? ` – ${info.title}`: ''}
             </div>
             <div className="versionDate">{date ? date.toDateString() : ''}</div>
