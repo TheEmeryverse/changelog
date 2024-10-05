@@ -27,9 +27,9 @@ export const Home = () => {
             <div className='sortDropdown'>
                 <div>Sort: </div>
                 <select onChange={(e) => {reorderLog(e.target.value, reorder)}}>
-                    <option value="recent">Recent</option>
+                    <option value="recent">Most Recent</option>
                     <option value="oldest">Oldest</option>
-                    <option value="major">Major</option>
+                    <option value="major">Major Releases</option>
                 </select>
             </div>
         </div>
