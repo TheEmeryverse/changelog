@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { VersionCard } from './components/VersionCard'
 
-const logfile = require('../updatelog.json')
+const logfile = require('../updatelog.json') // should be requested instead of imported, will update when logfile is hosted
 
 const reorderLog = (logOrder, reorder, updateOrderName) => {
     let newOrder
