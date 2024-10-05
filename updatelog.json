@@ -2,7 +2,7 @@
     "description" : "Changelog for the Emeryverse!",
     "versions": {
         "0.5" : {
-            "title": "",
+            "title": "Hello, world!",
             "date": "",
             "description": "Created Plex Server, basic protonvpn and qBittorrent downloader, manual folder sorting."
         },
@@ -17,7 +17,7 @@
             "description": "Added ombi, email notifications. Added Prowlarr."
         },
         "1.0" : {
-            "title": "",
+            "title": "Migration to lubuntu 20.04",
             "date": "",
             "description": "Migration to lubuntu 20.04, use docker for services."
         },
@@ -32,7 +32,7 @@
             "description": "Introduction of cloudflare tunnel for overseerr, enabling remote requesting."
         },
         "2.0" : {
-            "title": "",
+            "title": "Now with Cloudflare!",
             "date": "",
             "description": "Launching all services through cloudflare tunnel for external access, and utilizing cloudflare access to protect them."
         },
@@ -47,7 +47,7 @@
             "description": "Reconfigure hardware and docker config to prioritize better resource management. Install UPS to protect server from power outages and brownouts."
         },
         "3.0" : {
-            "title": "",
+            "title": "Join minecraft.emeryverse.com!",
             "date": "9/27/24",
             "description": "Launch of Minecraft Java Edition 1.21.1 Server utilizing Minekube tunnel and spigot connect .jar plugin for external access. Integrated into Uptime Kuma."
         },
