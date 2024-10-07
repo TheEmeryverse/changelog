@@ -1,0 +1,80 @@
+{
+    "description" : "Changelog for the Emeryverse!",
+    "versions": {
+        "0.5" : {
+            "title": "Hello, world!",
+            "date": "",
+            "description": "Created Plex Server, basic protonvpn and qBittorrent downloader, manual folder sorting."
+        },
+        "0.6" : {
+            "title": "",
+            "date": "",
+            "description": "Added radarr, sonarr for library organizing, dropbox shared folder and qBittorrent monitoring for mobile remote requests."
+        },
+        "0.7" : {
+            "title": "",
+            "date": "",
+            "description": "Added ombi, email notifications. Added Prowlarr."
+        },
+        "1.0" : {
+            "title": "Migration to lubuntu 20.04",
+            "date": "",
+            "description": "Migration to lubuntu 20.04, use docker for services."
+        },
+        "1.1" : {
+            "title": "",
+            "date": "",
+            "description": "Addition of readarr, bazarr, tautulli."
+        },
+        "1.2" : {
+            "title": "",
+            "date": "",
+            "description": "Introduction of cloudflare tunnel for overseerr, enabling remote requesting."
+        },
+        "2.0" : {
+            "title": "Now with Cloudflare!",
+            "date": "",
+            "description": "Launching all services through cloudflare tunnel for external access, and utilizing cloudflare access to protect them."
+        },
+        "2.1" : {
+            "title": "",
+            "date": "",
+            "description": "Introduce Uptime Kuma for remote monitoring and notifying, implement homebridge access through cloudflare."
+        },
+        "2.2" : {
+            "title": "",
+            "date": "",
+            "description": "Reconfigure hardware and docker config to prioritize better resource management. Install UPS to protect server from power outages and brownouts."
+        },
+        "3.0" : {
+            "title": "Join minecraft.emeryverse.com!",
+            "date": "9/27/24",
+            "description": "Launch of Minecraft Java Edition 1.21.1 Server utilizing Minekube tunnel and spigot connect .jar plugin for external access. Integrated into Uptime Kuma."
+        },
+        "3.0.1" : {
+            "title": "",
+            "date": "9/28/24",
+            "description": "Polishing minecraft server.properties. Access for /op access to server admin."
+        },
+        "3.0.2" : {
+            "title": "",
+            "date": "9/29/24",
+            "description": "Updated theme of updated theme of uptime kuma to be consistent with Plex experience. Added changelog.emeryverse.com to have externally accessed changelog website."
+        },
+        "3.0.3" : {
+            "title": "",
+            "date": "9/29/24",
+            "description": "Created TheEmeryverse github repo for changelog website and other future projects. Now using for code storage for changelog website."
+        },
+        "3.1" : {
+            "title": "",
+            "date": "10/1/24",
+            "description": "Automated container updating with updateContainers.sh and alias that automatically pulls latest commit and runs ./updateContainers.sh."
+        },
+        "3.2" : {
+            "title": "",
+            "date": "10/2/24",
+            "description": "Added CRON functionality to root level update script to execute every Tuesday at 4am, and non root at 3am."
+        }
+    }
+}
