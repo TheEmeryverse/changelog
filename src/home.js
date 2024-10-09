@@ -1,16 +1,30 @@
 import * as React from 'react'
 import { VersionCard } from './components/VersionCard'
 
-const logfile = require('../updatelog.json') // should be requested instead of imported, will update when logfile is hosted
+const logfile = require('../dist/updatelog.json')
 
-const reorderLog = (logOrder, reorder, updateOrderName) => {
+const fetchLog = async (setLogfile) => {
+    try {
+        const response = await fetch('updatelog.json')
+        const data = await response.json()
+        console.log('found update log')
+        setLogfile(data)
+    } catch (e) {
+        console.log('failed to grab logfile, using backup logfile', e)
+        setLogfile(logfile)
+    }
+}
+
+const reorderLog = (logFile, logOrder, reorder, updateOrderName) => {
+    if (!logFile) return
+
     let newOrder
     if (logOrder === 'recent') {
-        newOrder = Object.keys(logfile.versions).reverse()
+        newOrder = Object.keys(logFile.versions).reverse()
     } else if (logOrder === 'major') {
-        newOrder = Object.keys(logfile.versions).reverse().filter(version => !!logfile.versions[version].title)
+        newOrder = Object.keys(logFile.versions).reverse().filter(version => !!logFile.versions[version].title)
     } else {
-        newOrder = Object.keys(logfile.versions)
+        newOrder = Object.keys(logFile.versions)
     }
 
     updateOrderName(logOrder)
@@ -22,11 +36,13 @@ const reorderLog = (logOrder, reorder, updateOrderName) => {
     }
 }
 
-const search = (query, reorder, orderName, updateOrderName) => {
-    const originalOrder = reorderLog(orderName, false, updateOrderName)
+const search = (logFile, query, reorder, orderName, updateOrderName) => {
+    if (!logFile) return
+
+    const originalOrder = reorderLog(logFile, orderName, false, updateOrderName)
     
     const newOrder = originalOrder.filter(version => {
-        const {title, date, description} = logfile.versions[version]
+        const {title, date, description} = logFile.versions[version]
         return version.includes(query) ||
                 title.includes(query) ||
                 date.includes(query) ||
@@ -38,10 +54,12 @@ const search = (query, reorder, orderName, updateOrderName) => {
 
 export const Home = () => {
 
+    const [logFile, setLogfile] = React.useState(void 0)
     const [logOrder, reorder] = React.useState([])
     const [orderName, updateOrderName] = React.useState('recent')
 
-    React.useEffect(() => { reorderLog('recent', reorder, updateOrderName)}, [reorder])
+    React.useEffect(() => { fetchLog(setLogfile) }, [setLogfile])
+    React.useEffect(() => { reorderLog(logFile, 'recent', reorder, updateOrderName)}, [logFile])
 
     return <>
         <div className='bgGradient'></div>
@@ -49,8 +67,8 @@ export const Home = () => {
         <div className='sortRow'>
             <div className='sortDropdown'>
                 <div>Search: </div>
-                <input type="text" placeholder='Search' className='searchBar' onChange={(e) => {search(e.target.value, reorder, orderName, updateOrderName)}}/>
-                <select onChange={(e) => {reorderLog(e.target.value, reorder, updateOrderName)}}>
+                <input type="text" placeholder='Search' className='searchBar' onChange={(e) => {search(logFile, e.target.value, reorder, orderName, updateOrderName)}}/>
+                <select onChange={(e) => {reorderLog(logFile, e.target.value, reorder, updateOrderName)}}>
                     <option value="recent">Most Recent</option>
                     <option value="oldest">Oldest</option>
                     <option value="major">Major Releases</option>
