@@ -65,14 +65,18 @@ export const Home = () => {
         <div className='bgGradient'></div>
         <h1>The Emeryverse! Changelog</h1>
         <div className='sortRow'>
-            <div className='sortDropdown'>
+            <div className='sortArea'>
                 <div>Search: </div>
                 <input type="text" placeholder='Search' className='searchBar' onChange={(e) => {search(logFile, e.target.value, reorder, orderName, updateOrderName)}}/>
-                <select onChange={(e) => {reorderLog(logFile, e.target.value, reorder, updateOrderName)}}>
+                <select className='sortDropdown' onChange={(e) => {reorderLog(logFile, e.target.value, reorder, updateOrderName)}}>
                     <option value="recent">Most Recent</option>
                     <option value="oldest">Oldest</option>
                     <option value="major">Major Releases</option>
                 </select>
+                <div className='sortDropdownIcon'>
+                    <div className="upArrow">{'\u25bf'}</div>
+                    <div>{'\u25bf'}</div>
+                </div>
             </div>
         </div>
         <div className="versionsRow">

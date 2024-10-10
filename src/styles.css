@@ -40,25 +40,50 @@ h1 {
         border-radius: 5px;
         border: none;
         padding: 2px;
-        margin-left: 1rem;
-        margin-top: -2px;
-        width: 150px;
         padding-left: .5rem;
+        margin-left: 1rem;
+        width: 150px;
+        border: 1px solid rgba(255,255,255,0.8);
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.3);
+        color: #fff;
 }
 
-.sortDropdown {
+.sortArea {
         display: flex;
         text-transform: uppercase;
         align-items: center;
         justify-content: end;
         width: 100%;
         max-width: 832px;
+        position: relative;
 }
 
-.sortDropdown > select {
-        margin-left: 1rem;
+.sortDropdown {
         width: 150px;
-        font-size: 20px;
+        border: 1px solid rgba(255,255,255,0.8);
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.3);
+        color: rgba(255,255,255,0.8);
+        font-size: 13px;
+        appearance: none;
+        padding: 2px;
+        padding-left: .5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+}
+
+.sortDropdownIcon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        line-height: 6px;
+        pointer-events:none;
+}
+
+.upArrow {
+        transform: rotate(180deg);
 }
 
 .versionsRow {
