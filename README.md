@@ -1,4 +1,4 @@
-# changelog
+# Read Me :)
 changelog website
 
 Install latest from nodejs and npm
