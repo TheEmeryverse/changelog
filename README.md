@@ -3,7 +3,10 @@ changelog website
 
 Install latest from nodejs and npm
 
-run '$ npm i'
-run '$ npm start' for dev mode
-run '$ npm run build' for prod build
+Dev Env:<br />
+run '$ npm install'<br />
+run '$ npm start'<br />
+
+Build Prod:<br />
+run '$ npm run build'<br />
 
