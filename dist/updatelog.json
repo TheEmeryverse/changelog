@@ -90,11 +90,6 @@
             "title": "",
             "date": "10/6/24",
             "description": "Integrated hardware transcoding with Nvidia GPU with nvidia drivers, CUDA toolkit, and Nvidia container toolkit."
-        },
-        "4.3" : {
-            "title": "",
-            "date": "10/11/24",
-            "description": "Moved cloudflare tunnel container to raspberry Pi for redundancy and to keep status website up in the event of server going offline."
         }
     }
 }
