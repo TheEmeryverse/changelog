@@ -95,6 +95,11 @@
             "title": "",
             "date": "10/11/24",
             "description": "Moved cloudflare tunnel container to raspberry Pi for redundancy and to keep status website up in the event of server going offline. Increased server's RAM to 32gb and increased Minecraft server to 25GB."
+        },
+        "4.4" : {
+            "title": "",
+            "date": "10/12/24",
+            "description": "Added maintainerr to container stack. Will automatically clear out unwatched season of tv from the server after 1 week."
         }
     }
 }
