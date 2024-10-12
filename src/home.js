@@ -81,7 +81,7 @@ export const Home = () => {
         </div>
         <div className="versionsRow">
         {
-            logOrder.map(version => <VersionCard key={version} version={version} info={logfile.versions[version]} />)
+            logOrder.map(version => <VersionCard key={version} version={version} info={logFile.versions[version]} />)
         }
         </div>
     </>
