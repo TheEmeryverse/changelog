@@ -100,6 +100,11 @@
             "title": "",
             "date": "10/12/24",
             "description": "Added maintainerr to container stack. Will automatically clear out unwatched season of tv from the server after 1 week."
+        },
+        "4.5" : {
+            "title": "",
+            "date": "10/15/24",
+            "description": "Added mealie, a recipe manager. As of now only for personal use."
         }
     }
 }
